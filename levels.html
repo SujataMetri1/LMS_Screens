@@ -184,9 +184,18 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
       <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M8 5v3l2 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
       Payouts
     </a>
+    <a href="wallet.html" class="nav-item">
+      <svg viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="4" width="14" height="10" rx="1.5"/><path d="M1 7h14v2H1z"/><circle cx="12" cy="10" r="1"/></svg>
+      Wallet
+    </a>
+    <div class="nav-section">Files</div>
     <a href="levels.html" class="nav-item active">
       <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 12h12v2H2zm0-4h9v2H2zm0-4h6v2H2z"/></svg>
       Levels
+    </a>
+    <a href="assets.html" class="nav-item">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 2a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3zm1 2h3v3H4V4zm5 0h3v3H9V4zM4 9h3v3H4V9zm5 0h3v3H9V9z"/></svg>
+      Assets &amp; Topics
     </a>
     <div class="nav-section">System</div>
     <a href="settings.html" class="nav-item">
@@ -243,7 +252,7 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
     <div class="card">
       <div class="card-hd">
         <div class="card-title">Course Levels</div>
-        <span style="font-size:11.5px;color:var(--muted)">Click a level to view topics</span>
+        <span style="font-size:11.5px;color:var(--muted)">Click a level to view details</span>
       </div>
       <div style="overflow-x:auto">
         <table>
@@ -259,7 +268,7 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
             </tr>
           </thead>
           <tbody>
-            <tr class="clickable" onclick="openTopicsModal('beginner')">
+            <tr class="clickable" onclick="location.href='level_detail.html?level=beginner'">
               <td>
                 <div style="display:flex;align-items:center;gap:10px">
                   <div class="level-badge" style="background:#7c3aed">L1</div>
@@ -277,12 +286,12 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
                 </div>
               </td>
               <td onclick="event.stopPropagation()">
-                <button class="action-btn">
-                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l2 2-6 6H2V8l6-6z"/></svg>
-                </button>
+                <a href="level_detail.html?level=beginner" class="action-btn">
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6s2-4 5-4 5 4 5 4-2 4-5 4-5-4-5-4z"/><circle cx="6" cy="6" r="1.5"/></svg>
+                </a>
               </td>
             </tr>
-            <tr class="clickable" onclick="openTopicsModal('intermediate')">
+            <tr class="clickable" onclick="location.href='level_detail.html?level=intermediate'">
               <td>
                 <div style="display:flex;align-items:center;gap:10px">
                   <div class="level-badge" style="background:#0369a1">L2</div>
@@ -300,12 +309,12 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
                 </div>
               </td>
               <td onclick="event.stopPropagation()">
-                <button class="action-btn">
-                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l2 2-6 6H2V8l6-6z"/></svg>
-                </button>
+                <a href="level_detail.html?level=intermediate" class="action-btn">
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6s2-4 5-4 5 4 5 4-2 4-5 4-5-4-5-4z"/><circle cx="6" cy="6" r="1.5"/></svg>
+                </a>
               </td>
             </tr>
-            <tr class="clickable" onclick="openTopicsModal('advanced')">
+            <tr class="clickable" onclick="location.href='level_detail.html?level=advanced'">
               <td>
                 <div style="display:flex;align-items:center;gap:10px">
                   <div class="level-badge" style="background:#be123c">L3</div>
@@ -323,12 +332,12 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
                 </div>
               </td>
               <td onclick="event.stopPropagation()">
-                <button class="action-btn">
-                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l2 2-6 6H2V8l6-6z"/></svg>
-                </button>
+                <a href="level_detail.html?level=advanced" class="action-btn">
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6s2-4 5-4 5 4 5 4-2 4-5 4-5-4-5-4z"/><circle cx="6" cy="6" r="1.5"/></svg>
+                </a>
               </td>
             </tr>
-            <tr class="clickable" onclick="openTopicsModal('foundation')">
+            <tr class="clickable" onclick="location.href='level_detail.html?level=foundation'">
               <td>
                 <div style="display:flex;align-items:center;gap:10px">
                   <div class="level-badge" style="background:#059669">L1</div>
@@ -346,12 +355,12 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
                 </div>
               </td>
               <td onclick="event.stopPropagation()">
-                <button class="action-btn">
-                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l2 2-6 6H2V8l6-6z"/></svg>
-                </button>
+                <a href="level_detail.html?level=foundation" class="action-btn">
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6s2-4 5-4 5 4 5 4-2 4-5 4-5-4-5-4z"/><circle cx="6" cy="6" r="1.5"/></svg>
+                </a>
               </td>
             </tr>
-            <tr class="clickable" onclick="openTopicsModal('electro')">
+            <tr class="clickable" onclick="location.href='level_detail.html?level=electro'">
               <td>
                 <div style="display:flex;align-items:center;gap:10px">
                   <div class="level-badge" style="background:#0891b2">L2</div>
@@ -369,9 +378,9 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
                 </div>
               </td>
               <td onclick="event.stopPropagation()">
-                <button class="action-btn">
-                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l2 2-6 6H2V8l6-6z"/></svg>
-                </button>
+                <a href="level_detail.html?level=electro" class="action-btn">
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6s2-4 5-4 5 4 5 4-2 4-5 4-5-4-5-4z"/><circle cx="6" cy="6" r="1.5"/></svg>
+                </a>
               </td>
             </tr>
           </tbody>
@@ -435,91 +444,12 @@ tr.clickable:hover td{background:#faf8ff;cursor:pointer}
   </div>
 </div>
 
-<!-- LEVEL TOPICS MODAL -->
-<div class="modal-overlay" id="topics-modal" onclick="closeTopicsModal()">
-  <div class="modal-box" style="width:460px" onclick="event.stopPropagation()">
-    <div class="modal-hd">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div id="topics-badge" class="level-badge"></div>
-        <div>
-          <div id="topics-title" class="modal-title"></div>
-          <div id="topics-course" style="font-size:11px;color:var(--muted);margin-top:2px"></div>
-        </div>
-      </div>
-      <button class="modal-close" onclick="closeTopicsModal()">
-        <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l10 10M11 1L1 11"/></svg>
-      </button>
-    </div>
-    <div class="modal-bd" id="topics-body"></div>
-    <div class="modal-ft">
-      <button class="btn btn-ghost btn-sm" onclick="closeTopicsModal()">Close</button>
-    </div>
-  </div>
-</div>
-
 <script>
-const levelData={
-  beginner:{code:'L1',color:'#7c3aed',title:'Beginner',course:'Mathematics',desc:'Algebra fundamentals',topics:[
-    {name:'Introduction to Algebra',status:'done'},
-    {name:'Linear Equations',status:'done'},
-    {name:'Quadratic Equations',status:'wip'},
-    {name:'Polynomials',status:'todo'},
-  ]},
-  intermediate:{code:'L2',color:'#0369a1',title:'Intermediate',course:'Mathematics',desc:'Geometry & Trigonometry',topics:[
-    {name:'Triangles & Congruence',status:'done'},
-    {name:'Circles & Theorems',status:'done'},
-    {name:'Trigonometric Ratios',status:'wip'},
-    {name:'Heights & Distances',status:'todo'},
-    {name:'Coordinate Geometry',status:'todo'},
-  ]},
-  advanced:{code:'L3',color:'#be123c',title:'Advanced',course:'Mathematics',desc:'Calculus & Statistics',topics:[
-    {name:'Limits & Continuity',status:'done'},
-    {name:'Differentiation',status:'wip'},
-    {name:'Integration',status:'todo'},
-    {name:'Probability',status:'todo'},
-    {name:'Statistics & Distributions',status:'todo'},
-    {name:'Vectors & 3D Geometry',status:'todo'},
-  ]},
-  foundation:{code:'L1',color:'#059669',title:'Foundation',course:'Physics',desc:'Mechanics & Motion',topics:[
-    {name:'Units & Measurements',status:'done'},
-    {name:'Motion in a Straight Line',status:'done'},
-    {name:'Laws of Motion (Newton)',status:'wip'},
-  ]},
-  electro:{code:'L2',color:'#0891b2',title:'Electromagnetism',course:'Physics',desc:'Electricity & Magnetism',topics:[
-    {name:'Electric Charges & Fields',status:'done'},
-    {name:'Gauss\'s Law',status:'wip'},
-    {name:'Capacitance',status:'todo'},
-    {name:'Magnetic Effects of Current',status:'todo'},
-  ]},
-};
-
 function openAddLevelModal(){
   document.getElementById('add-level-modal').classList.add('open');
 }
 function closeAddLevelModal(){
   document.getElementById('add-level-modal').classList.remove('open');
-}
-
-function openTopicsModal(key){
-  const d=levelData[key];
-  if(!d)return;
-  const badge=document.getElementById('topics-badge');
-  badge.textContent=d.code;
-  badge.style.background=d.color;
-  document.getElementById('topics-title').textContent=d.title+' Level';
-  document.getElementById('topics-course').textContent=d.course+' · '+d.desc;
-  const body=document.getElementById('topics-body');
-  body.innerHTML=d.topics.map((t,i)=>`
-    <div class="topic-item">
-      <div class="topic-num">${i+1}</div>
-      <div class="topic-name">${t.name}</div>
-      <span class="topic-status ${t.status}">${t.status==='done'?'✓ Done':t.status==='wip'?'In Progress':'To Do'}</span>
-    </div>
-  `).join('');
-  document.getElementById('topics-modal').classList.add('open');
-}
-function closeTopicsModal(){
-  document.getElementById('topics-modal').classList.remove('open');
 }
 </script>
 </body>
