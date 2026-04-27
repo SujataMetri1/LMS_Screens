@@ -785,6 +785,10 @@ function openDetail(id){
             Levels
             <span class="tag">${c.levels.length} levels · ${totalTopics} topics</span>
           </div>
+          <button class="btn btn-blue-sm" onclick="location.href='levels.html'">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><path d="M5 1v4H1v2h4v4h2V7h4V5H7V1z"/></svg>
+            Add Level
+          </button>
         </div>
         <div class="card-bd">
           ${c.levels.map((lv,li)=>`
@@ -796,7 +800,7 @@ function openDetail(id){
               </div>
               <span class="level-topics-count">${lv.topics.length} topics</span>
               <div class="act-grp" onclick="event.stopPropagation()" style="margin-right:10px">
-                <button class="act-btn" onclick="openMo('mo-add-topic')" title="Add Topic" style="border-color:rgba(37,99,235,0.25);color:var(--blue)">
+                <button class="act-btn" onclick="location.href='assets.html'" title="Add Topic" style="border-color:rgba(37,99,235,0.25);color:var(--blue)">
                   <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><path d="M5 1v4H1v2h4v4h2V7h4V5H7V1z"/></svg>
                 </button>
                 <button class="act-btn" title="Edit Level"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l2 2-6 6H2V8l6-6z"/></svg></button>

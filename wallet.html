@@ -285,10 +285,6 @@ tr:hover td{background:#faf8ff}
           <svg width="13" height="13" viewBox="0 0 12 12" fill="currentColor"><path d="M5 1v4H1v2h4v4h2V7h4V5H7V1z"/></svg>
           Add Funds
         </button>
-        <button class="wh-btn ghost" onclick="openWithdrawModal()">
-          <svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9V3M3 6l3 3 3-3"/></svg>
-          Withdraw
-        </button>
       </div>
       <div class="wh-stats">
         <div>
@@ -467,34 +463,8 @@ tr:hover td{background:#faf8ff}
   </div>
 </div>
 
-<!-- WITHDRAW MODAL -->
-<div class="modal-overlay" id="withdraw-modal" onclick="closeModal('withdraw-modal')">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <div class="modal-hd">
-      <div><div class="modal-title">Withdraw Funds</div><div style="font-size:11px;color:var(--muted);margin-top:2px">Transfer from wallet to bank</div></div>
-      <button class="modal-close" onclick="closeModal('withdraw-modal')"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l10 10M11 1L1 11"/></svg></button>
-    </div>
-    <div class="modal-bd">
-      <div class="field" style="margin-bottom:16px"><div class="field-label">Amount (₹)</div><input type="number" placeholder="e.g. 20000"></div>
-      <div class="field-row two" style="margin-bottom:16px">
-        <div class="field"><div class="field-label">Bank Account</div><select><option>HDFC — ****4821</option><option>SBI — ****9102</option></select></div>
-        <div class="field"><div class="field-label">Date</div><input type="date" value="2026-04-27"></div>
-      </div>
-      <div class="field"><div class="field-label">Reason</div><textarea placeholder="Purpose of withdrawal…"></textarea></div>
-    </div>
-    <div class="modal-ft">
-      <button class="btn btn-ghost btn-sm" onclick="closeModal('withdraw-modal')">Cancel</button>
-      <button class="btn btn-primary btn-sm" onclick="closeModal('withdraw-modal')">
-        <svg width="11" height="11" viewBox="0 0 12 12" fill="currentColor"><path d="M2 6l3 3 5-5"/></svg>
-        Confirm
-      </button>
-    </div>
-  </div>
-</div>
-
 <script>
 function openAddFundsModal(){document.getElementById('add-funds-modal').classList.add('open')}
-function openWithdrawModal(){document.getElementById('withdraw-modal').classList.add('open')}
 function closeModal(id){document.getElementById(id).classList.remove('open')}
 </script>
 </body>
